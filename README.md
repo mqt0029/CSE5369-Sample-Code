@@ -51,6 +51,30 @@ necessary code and prefabs necessary to complete assignments. To import, go to
 selection dialog. Navigate to where you download the `.unitypackage` and select
 it.
 
-### 6. Add camera into scene
+![](/images/import_package.gif)
+
+### 6. Add RGBD camera into scene
+
+The `RGBDCamera` prefab has all the necessary scripts pre-attached to it and can
+simply be put into the scene. You can now move and rotate it as you would any
+other `GameObject` in the scene to adjust your camera POV.
+
+![](/images/add_camera.gif)
 
 ### 7. Verify Python communication
+
+At this point, the camera will begin capture and send data to Python, while also
+listening in for message from Python. You may uncomment:
+1. line 53-54 of
+the script to view the RGB image
+2. line 90-91 to view the depth image
+
+If everything is done correctly, you should see Unity console display  "test
+message".
+
+***You are to modify the code after line 120 in `opencv_receiver.py`.***
+
+Additionally, you may chose to disable the debug prints in
+`PythonSocketCommunicator.cs`, it is only there for testing purposes.
+
+![](/images/test.gif)

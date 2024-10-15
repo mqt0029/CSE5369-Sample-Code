@@ -120,8 +120,6 @@ def send_thread(ipaddr='127.0.0.1', bind_port=65403, destination_port=65402):
 # ---------------------------------------------------------------------------- #
             
             # do image processing here
-            print(rgb_image[:10])
-            print(depth_image[:10])
             
             # update the information needed for robot motion
             outgoing_message = 'test message'.encode()
